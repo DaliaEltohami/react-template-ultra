@@ -1,4 +1,5 @@
 import React from "react";
+import Home from "../Home";
 import Work from "../Work";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
@@ -10,6 +11,7 @@ import About from "../About";
 function Index() {
   return (
     <div>
+      <Home></Home>
       <Work />
       <Portfolio />
       <Profile />

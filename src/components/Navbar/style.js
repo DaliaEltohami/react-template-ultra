@@ -6,6 +6,9 @@ export const NavbarSection = styled.div`
   background: #fff;
   position: relative;
   border-bottom: 1px solid #000;
+`;
+
+export const NavbarSectionContent = styled.div`
   display: flex;
   align-items: center;
 `;
