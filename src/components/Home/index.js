@@ -13,7 +13,7 @@ function Home() {
     <HomeSection>
       <div className="container">
         <HomeInformation>
-          <HomeTitle>Hamza Nabil</HomeTitle>
+          <HomeTitle>Dalia Eltohami</HomeTitle>
           <HomeInfo>Creative Director</HomeInfo>
           <HomeDesc>
             Iam a professional <span>UX Designer</span> and Front-End Developer

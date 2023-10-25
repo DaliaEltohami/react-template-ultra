@@ -35,20 +35,21 @@ export const HomeDesc = styled.p`
   margin-bottom: 20px;
 `;
 
-export const Span = styled.span` color: #000
-}`;
+export const Span = styled.span`
+  color: #000;
+`;
 
-export const HomeBtn = styled.button`    background: #eb5424;
-color: #fff;
-font-size: 18px;
-width: 150px;
-border: 0;
-padding: 15px;
-cursor: pointer;
-font-weight: bold
-&:hover{
+export const HomeBtn = styled.button`
+  background: #eb5424;
+  color: #fff;
+  font-size: 18px;
+  width: 150px;
+  border: 0;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  &:hover {
     background: #fff;
-    color: #eb5424
-}
-
+    color: #eb5424;
+  }
 `;

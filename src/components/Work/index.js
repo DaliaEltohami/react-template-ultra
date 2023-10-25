@@ -35,7 +35,7 @@ class Work extends Component {
           </WorkTitle>
           {works.map((work) => {
             return (
-              <WorkPart first={work.id} key={work.id}>
+              <WorkPart $first={work.id} key={work.id}>
                 <Icon className={work.icon_name}></Icon>
                 <PartTitle>{work.title}</PartTitle>
                 <Line />

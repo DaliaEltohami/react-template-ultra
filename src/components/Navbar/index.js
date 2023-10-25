@@ -8,11 +8,12 @@ import {
   LogoText,
   NavbarSectionContent,
 } from "./style";
+import Container from "../styles/Container.styled";
 
 function Navbar() {
   return (
     <NavbarSection>
-      <div className="container">
+      <Container>
         <NavbarSectionContent>
           <Logo>
             <LogoText>Ultra Profile</LogoText>
@@ -39,7 +40,7 @@ function Navbar() {
             </ListItem>
           </List>
         </NavbarSectionContent>
-      </div>
+      </Container>
     </NavbarSection>
   );
 }
