@@ -12,6 +12,8 @@ import {
   PartDesc,
 } from "./style";
 
+import Container from "../styles/Container.styled";
+
 class Work extends Component {
   state = {
     works: [],
@@ -29,7 +31,7 @@ class Work extends Component {
     console.log(works);
     return (
       <WorkSection>
-        <div className="container">
+        <Container>
           <WorkTitle>
             <Span>My</Span> Work
           </WorkTitle>
@@ -43,7 +45,7 @@ class Work extends Component {
               </WorkPart>
             );
           })}
-        </div>
+        </Container>
       </WorkSection>
     );
   }

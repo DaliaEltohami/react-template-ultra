@@ -1,90 +1,83 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ProfileSkills = styled.div`
   padding: 50px 0;
-  overflow: hidden;`
+  overflow: hidden;
+`;
 
-export const ProfileSection = styled.div `  width: 50%;
-float: left;`
+export const ProfileSection = styled.div`
+  width: 50%;
+  float: left;
+`;
 
 export const ProfileList = styled.ul`
   list-style: none;
-`
+`;
 
 export const ProfileListItem = styled.li`
   margin-bottom: 8px;
-`
+`;
 
-export const ProfileListItemSpan = styled.span`  display: inline-block;
-width: 100px;
-font-weight: ${({$web})=> $web? 'normal': 'bold'};
-color: ${({$web})=> $web?  '#eb5424':''};
-`
-
+export const ProfileListItemSpan = styled.span`
+  display: inline-block;
+  width: 100px;
+  font-weight: ${({ $web }) => ($web ? "normal" : "bold")};
+  color: ${({ $web }) => ($web ? "#eb5424" : "")};
+`;
 
 export const Skills = styled.div`
   width: 50%;
   float: left;
-`
+`;
 
 export const SkillsDesc = styled.p`
   font-size: 15px;
   color: #888;
   line-height: 1.5;
   margin-bottom: 20px;
-`
+`;
 export const Bar = styled.div`
   overflow: hidden;
   padding: 10px 0;
-  margin-bottom: 10px;`
+  margin-bottom: 10px;
+`;
 
-
-
-.profile_skills .skills .bar .title {
+export const BarTitle = styled.span`
   float: left;
-}
+`;
 
-.profile_skills .skills .bar .perc {
+export const Perc = styled.span`
   float: right;
   margin-right: 100px;
-}
+`;
 
-.profile_skills .skills .bar .parent {
+export const BarParent = styled.div`
   height: 2px;
   clear: both;
   background: #f8f8f8;
   position: relative;
   top: 5px;
-}
+`;
 
-.profile_skills .skills .bar .parent span {
+export const BarParentSpan = styled.span`
   background: #eb5424;
   position: absolute;
   display: block;
   top: 0;
   left: 0;
   bottom: 0;
-}
+  width: ${({ $perc }) => $perc};
+`;
 
-.profile_skills .skills .bar .parent span.sp1 {
-  width: 100%;
-}
-
-.profile_skills .skills .bar .parent span.sp2 {
-  width: 90%;
-}
-
-.profile_skills .skills .bar .parent span.sp3 {
-  width: 80%;
-}
-
-.profile_skills .profile .profile-title,
-.profile_skills .skills .skills-title {
+export const ProfileTitle = styled.h2`
   font-size: 40px;
   margin-bottom: 20px;
-}
+`;
 
-.profile_skills .profile .profile-title span,
-.profile_skills .skills .skills-title span {
+export const SkillsTitle = styled(ProfileTitle)``;
+
+export const ProfileTitleSpan = styled.span`
   font-weight: normal;
-}
+`;
+
+export const SkillsTitleSpan = styled(ProfileTitleSpan)``;

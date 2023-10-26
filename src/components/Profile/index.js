@@ -1,75 +1,91 @@
-import React from "react";
-import "./style.js";
+import React, { useEffect, useState } from "react";
+import {
+  ProfileSkills,
+  ProfileSection,
+  ProfileList,
+  ProfileListItem,
+  ProfileListItemSpan,
+  Skills,
+  SkillsDesc,
+  Bar,
+  BarTitle,
+  Perc,
+  BarParent,
+  BarParentSpan,
+  ProfileTitle,
+  SkillsTitle,
+  ProfileTitleSpan,
+  SkillsTitleSpan,
+} from "./style.js";
+import Container from "../styles/Container.styled.js";
+import axios from "axios";
 
 function Profile() {
-  return (
-    <div class="profile_skills">
-      <div class="container">
-        <div class="profile">
-          <h2 class="profile-title">
-            <span>My </span>Profile
-          </h2>
-          <ul class="profile-list">
-            <li class="profile-item">
-              <span>Name</span>
-              Hamza Nabil
-            </li>
-            <li class="profile-item">
-              <span>Birthday</span>
-              21/1/1996
-            </li>
-            <li class="profile-item">
-              <span>Address</span>
-              Ain shams
-            </li>
-            <li class="profile-item">
-              <span>Phone</span>
-              4444 5555 6666
-            </li>
-            <li class="profile-item">
-              <span>Email</span>
-              hamza@hamza.com
-            </li>
-            <li class="profile-item">
-              <span>Website</span>
-              <span class="web">www.google.com</span>
-            </li>
-          </ul>
-        </div>
+  const [skills, setSkills] = useState([]);
 
-        <div class="skills">
-          <h2 class="skills-title">
-            Some <span>skills</span>
-          </h2>
-          <p class="skills-desc">
+  useEffect(() => {
+    axios.get("js/data.json").then((res) => setSkills(res.data.skills));
+  }, []);
+
+  const skillsBars = skills.map((skill) => {
+    return (
+      <Bar key={skill.id}>
+        <BarTitle>{skill.name}</BarTitle>
+        <Perc>{skill.percentage}</Perc>
+        <BarParent>
+          <BarParentSpan $perc={skill.percentage}></BarParentSpan>
+        </BarParent>
+      </Bar>
+    );
+  });
+
+  return (
+    <ProfileSkills>
+      <Container>
+        <ProfileSection>
+          <ProfileTitle>
+            <ProfileTitleSpan>My </ProfileTitleSpan>Profile
+          </ProfileTitle>
+          <ProfileList>
+            <ProfileListItem>
+              <ProfileListItemSpan>Name</ProfileListItemSpan>
+              Hamza Nabil
+            </ProfileListItem>
+            <ProfileListItem>
+              <ProfileListItemSpan>Birthday</ProfileListItemSpan>
+              21/1/1996
+            </ProfileListItem>
+            <ProfileListItem>
+              <ProfileListItemSpan>Address</ProfileListItemSpan>
+              Ain shams
+            </ProfileListItem>
+            <ProfileListItem>
+              <ProfileListItemSpan>Phone</ProfileListItemSpan>
+              4444 5555 6666
+            </ProfileListItem>
+            <ProfileListItem>
+              <ProfileListItemSpan>Email</ProfileListItemSpan>
+              hamza@hamza.com
+            </ProfileListItem>
+            <ProfileListItem>
+              <ProfileListItemSpan>Website</ProfileListItemSpan>
+              <ProfileListItemSpan $web>www.google.com</ProfileListItemSpan>
+            </ProfileListItem>
+          </ProfileList>
+        </ProfileSection>
+
+        <Skills>
+          <SkillsTitle>
+            Some <SkillsTitleSpan>skills</SkillsTitleSpan>
+          </SkillsTitle>
+          <SkillsDesc>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
             praesentium blanditiis esse cupiditate, omnis similique.
-          </p>
-          <div class="bar">
-            <span class="title">Bootstrap</span>
-            <span class="perc">100%</span>
-            <div class="parent">
-              <span class="sp1"></span>
-            </div>
-          </div>
-          <div class="bar">
-            <span class="title">CSS3</span>
-            <span class="perc">90%</span>
-            <div class="parent">
-              <span class="sp2"></span>
-            </div>
-          </div>
-
-          <div class="bar">
-            <span class="title">Photoshop</span>
-            <span class="perc">80%</span>
-            <div class="parent">
-              <span class="sp3"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </SkillsDesc>
+          {skillsBars}
+        </Skills>
+      </Container>
+    </ProfileSkills>
   );
 }
 export default Profile;
