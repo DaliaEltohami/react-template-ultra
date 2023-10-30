@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-template-ultra/static/css/main.f4dc68ec.css",
+    "main.js": "/react-template-ultra/static/js/main.b1529bfe.js",
+    "index.html": "/react-template-ultra/index.html",
+    "main.f4dc68ec.css.map": "/react-template-ultra/static/css/main.f4dc68ec.css.map",
+    "main.b1529bfe.js.map": "/react-template-ultra/static/js/main.b1529bfe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4dc68ec.css",
+    "static/js/main.b1529bfe.js"
+  ]
+}
